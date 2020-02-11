@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  #methods that allow the user to log in to be available 
+  skip_before_action :authorized, only: [:new, :create]
+
   def new
 	  @user = User.new
   end
