@@ -10,4 +10,10 @@ Rails.application.routes.draw do
 	
 	get 'authorized', to: 'sessions#page_requires_login'
 
+	get 'measure', to: 'calculators#index'
+
+	post 'measure', to: 'calculators#measure'
+
+	root 'sessions#welcome'
+
 end

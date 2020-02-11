@@ -1,0 +1,17 @@
+<h1>Measure BMI</h1>
+
+<%= form_with scope: :measure, url: '/measure', local: true do |f| %>
+
+	<%= f.label :height %><br>
+
+	<%= f.text_field :height%><br>
+
+	<%= f.label :weight%><br>
+
+	<%= f.text_field :weight%><br>
+
+	<%= f.submit %>
+<%end%>
+
+<label><%= @result%></label><br>
+<label><%= @category%></label>
