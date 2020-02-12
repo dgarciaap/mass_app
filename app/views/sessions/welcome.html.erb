@@ -1,13 +1,16 @@
-<h1>Welcome</h1>
+<div class ="row">
+	<div class ="col-12 text-center">
+  	  <h1 class="lead">Welcome</h1>
 
-<% if logged_in? %>
+  	  <% if logged_in? %>
 
-	<h1>You are Logged In, <%= current_user.username %></h1>
+		<h1 class="lead">You are logged in, <%= current_user.username %></h1>
 
-<%end%>
-
-<%= button_to "Login", '/login', method: :get%>
-
-<%= button_to "Sign Up", '/users/new', method: :get%>
-
-<%= button_to "Calculate IBM", measure_path, method: :get%>
+  	  <%end%>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12 text-center">
+		<%= button_to "Calculate BMI", measure_path, method: :get, class: 'btn btn-lg btn-danger'%>
+	</div>
+</div>

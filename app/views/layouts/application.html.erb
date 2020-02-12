@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MassApp</title>
+    <title>BMI App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+	  <header class="navbar navbar-fixed-top navbar-inverse">
+	  <div class="container">
+		  <a class="navbar-brand lead text-white" href="#">BMI App</a>
+		  <nav>
+			  <ul class="nav navbar-nav navbar-right">
+				  <li><%= link_to "Login", '/login', method: :get, class: 'lead'%></li>
+				  <li><%= link_to "Sign Up", '/users/new', method: :get, class: 'lead'%></li>
+			  </ul>
+		  </nav>
+	  </div>
+	  </header>
+
+	  <div class="container">
+    		<%= yield %>
+	  </div>
   </body>
 </html>

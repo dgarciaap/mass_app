@@ -1,16 +1,12 @@
-<h1>Log in</h1>
+<h1 class="text-center mt-5">Log in</h1>
 
-<%= form_tag '/login' do %>
+<%= bootstrap_form_tag url: '/login' do |f| %>
 
-<%= label_tag :username%>
+  <%= text_field_tag :username%>
 
-<%= text_field_tag :username%>
+  <%= password_field_tag :password%>
 
-<%= label_tag :password%>
-
-<%= password_field_tag :password%>
-
-<%= submit_tag "Log in"%>
+  <%= submit_tag "Log in"%>
 
 <% end %>
-
+<button class="btn btn-light"><%= link_to "Go back", '/welcome', method: :get%></button>

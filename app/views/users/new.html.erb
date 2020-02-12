@@ -1,14 +1,11 @@
 <h1>Sign Up</h1>
 
-<%= form_for @user do |f|%>
+<%= bootstrap_form_for(@user) do |f|%>
 
-	<%= f.label :username %><br>
-	
 	<%= f.text_field :username %><br>
-
-	<%= f.label :password %><br>
 
 	<%= f.password_field :password%><br>
 
 	<%= f.submit %>
 <%end%>
+<button class="btn btn-light"><%= link_to "Go back", '/welcome', method: :get%></button>
