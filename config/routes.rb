@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 	#will be directed to create method in sessions controller
 	post 'login', to: 'sessions#create'
 
+	delete 'logout', to: 'sessions#destroy'
+
 	get 'welcome', to: 'sessions#welcome'
 	
 	get 'authorized', to: 'sessions#page_requires_login'

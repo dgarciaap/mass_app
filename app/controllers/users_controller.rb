@@ -14,4 +14,5 @@ class UsersController < ApplicationController
 
 	redirect_to '/welcome'
   end
+
 end
