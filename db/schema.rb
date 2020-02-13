@@ -12,11 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2020_02_11_180608) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "calculators", force: :cascade do |t|
     t.float "height"
     t.float "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "playgroud", primary_key: "equip_id", id: :serial, force: :cascade do |t|
+    t.string "type", limit: 50, null: false
+    t.date "install_date"
   end
 
   create_table "users", force: :cascade do |t|
