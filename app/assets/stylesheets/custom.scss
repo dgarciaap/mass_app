@@ -1,3 +1,43 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+h1 {
+  margin-top: 30px;
+}
+
+a {
+  padding-top: 30px;
+}
+
+li {
+  padding-top: 10px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  padding-top: 25px;
+  font-size: 1.7em;
+  color: #fff;	
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#flash-messages-section {
+  padding-top: 60px;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+}

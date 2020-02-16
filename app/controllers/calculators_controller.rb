@@ -6,9 +6,10 @@ class CalculatorsController < ApplicationController
 	  @weight = calculation_params[:weight].to_f
 	  @height = calculation_params[:height].to_f
 
-    @result = (@weight / (@height ** 2)).round(1)
+    @result = (@weight / (@height ** 2))#.round(1)
     @category = 'Your category is: '
     
+    #binding.pry
     case @result
     when 15.0..18.4
 	   @category += ' Underweight'
@@ -17,7 +18,7 @@ class CalculatorsController < ApplicationController
     when 25.0..60.0
 	   @category += ' Overweight'
     else
-	   raise ' Error: result has and invalid value'
+	   flash[:danger] = "Invalid data"
     end
   end
 
